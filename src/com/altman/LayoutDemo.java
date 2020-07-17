@@ -16,7 +16,7 @@ public class LayoutDemo extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         // 实例化按钮
-        Button button = new Button("这是按钮上的文字");
+        Button button = new Button("这是按钮上的文字123");
 
         // 创建布局控件
         StackPane stackPane = new StackPane();

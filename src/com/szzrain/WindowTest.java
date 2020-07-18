@@ -22,9 +22,9 @@ public class WindowTest {
         });
     }
 
-    static void getComputer(String name, String pinPai, String colour) {
+    static void getComputer(String name, String brand, String colour) {
         try {
-            laptops.add(new Laptop(name, pinPai, colour));
+            laptops.add(new Laptop(name, brand, colour));
             ButtonFrame.computerNumber++;
             System.out.println("create succeed");
         } catch (NameException e1) {
@@ -41,7 +41,7 @@ public class WindowTest {
     }
 
     static void getUSB(String name, String pinPai, String Colour, int type) {
-        //TODO:connect this method to a actionListener in order to create USB device
+        //TODO:use this method  with a actionListener in order to create USB device
     }
 }
 

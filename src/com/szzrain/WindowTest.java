@@ -47,9 +47,6 @@ public class WindowTest {
 
 class ButtonFrame extends JFrame {
     public static int computerNumber;
-    private JPanel buttonPanel;
-    private JPanel textPanel;
-    private JPanel underPanel;
     TextField computerInputName = new TextField("Name", 10);
     TextField computerInputBrand = new TextField("Brand", 10);
     TextField computerInputColour = new TextField("Colour", 10);
@@ -58,9 +55,9 @@ class ButtonFrame extends JFrame {
     TextField getUSBType = new TextField("Type(USB)", 10);
 
     ButtonFrame() {
-        buttonPanel = new JPanel();
-        textPanel = new JPanel();
-        underPanel = new JPanel();
+        JPanel buttonPanel = new JPanel();
+        JPanel textPanel = new JPanel();
+        JPanel underPanel = new JPanel();
         setSize(1600, 800);
 
         JButton createComputerButton = new JButton("Create Computer");
@@ -97,7 +94,7 @@ class ButtonFrame extends JFrame {
         add(underPanel, BorderLayout.CENTER);
     }
 
-    private class CreateComputerListener implements ActionListener {
+    private static class CreateComputerListener implements ActionListener {
         private TextField textFieldName;
         private TextField textFieldBrand;
         private TextField textFieldColour;
@@ -115,7 +112,7 @@ class ButtonFrame extends JFrame {
         }
     }
 
-    class UseUSBListener implements ActionListener {
+    static class UseUSBListener implements ActionListener {
         private TextField numField;
 
         public UseUSBListener(TextField numField) {
@@ -132,7 +129,7 @@ class ButtonFrame extends JFrame {
         }
     }
 
-    class GetUSBListener implements ActionListener {
+    static class GetUSBListener implements ActionListener {
         TextField nameField;
         TextField computerNameField;
         TextField usbTypeField;
@@ -162,7 +159,7 @@ class ButtonFrame extends JFrame {
         }
     }
 
-    class SeeComputerInformationListener implements ActionListener {
+    static class SeeComputerInformationListener implements ActionListener {
         private TextField textField;
 
         public SeeComputerInformationListener(TextField textField) {

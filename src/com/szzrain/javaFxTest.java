@@ -16,6 +16,7 @@ import java.util.ArrayList;
  * @throws NameException if computer name is illegal, then throws this exception
  */
 public class javaFxTest extends Application implements EventHandler<MouseEvent> {
+    static int computerNumber = 0;
 
     Scene createComputerScene, homeScene;
     public static ArrayList<Laptop> laptops = new ArrayList();
@@ -51,7 +52,7 @@ public class javaFxTest extends Application implements EventHandler<MouseEvent> 
     static void createComputer(String name, String brand, String colour) {
         try {
             laptops.add(new Laptop(name, brand, colour));
-            ButtonFrame.computerNumber++;
+            computerNumber++;
             System.out.println("create succeed");
         } catch (NameException e1) {
             System.out.println("can not be like that!");

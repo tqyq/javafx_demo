@@ -9,7 +9,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
-
+/**
+ * @deprecated
+ */
 public class WindowTest {
     public static ArrayList<Laptop> laptops = new ArrayList();
 
@@ -42,6 +44,7 @@ public class WindowTest {
 
     static void getUSB(String name, String pinPai, String Colour, int type) {
         //TODO:use this method  with a actionListener in order to create USB device
+        //Never mind,
     }
 }
 

@@ -15,7 +15,7 @@ import java.util.InputMismatchException;
 public class WindowTest {
     public static ArrayList<Laptop> laptops = new ArrayList();
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
             JFrame jFrame = new ButtonFrame();
             jFrame.setTitle("Computer Demo");
@@ -48,6 +48,9 @@ public class WindowTest {
     }
 }
 
+/**
+ * @deprecated
+ */
 class ButtonFrame extends JFrame {
     public static int computerNumber;
     TextField computerInputName = new TextField("Name", 10);

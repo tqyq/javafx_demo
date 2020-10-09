@@ -30,8 +30,8 @@ public final class Laptop {
         this.module = Brand;
         this.name = name;
 
-        if (colour.equals("")) {
-            throw new NameException("");
+        if ("".equals(colour)) {
+            throw new NameException("NameNotSet");
         }
         this.colour = colour;
     }

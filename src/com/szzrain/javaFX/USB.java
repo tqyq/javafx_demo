@@ -1,4 +1,4 @@
-package com.szzrain;
+package com.szzrain.javaFX;
 
 public interface USB {
     public abstract void openDevices();

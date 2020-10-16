@@ -1,4 +1,4 @@
-package com.szzrain;
+package com.szzrain.javaFX;
 
 public class NameException extends RuntimeException {
     private String cause;

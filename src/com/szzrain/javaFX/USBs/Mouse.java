@@ -1,6 +1,6 @@
-package com.szzrain.USBs;
+package com.szzrain.javaFX.USBs;
 
-import com.szzrain.USB;
+import com.szzrain.javaFX.USB;
 
 public final class Mouse implements USB {
     private String name;

@@ -1,4 +1,4 @@
-package com.szzrain;
+package com.szzrain.javaFX;
 
 import javafx.application.Application;
 import javafx.event.EventHandler;

@@ -1,7 +1,7 @@
-package com.szzrain;
+package com.szzrain.javaFX;
 
-import com.szzrain.USBs.Disk;
-import com.szzrain.USBs.Mouse;
+import com.szzrain.javaFX.USBs.Disk;
+import com.szzrain.javaFX.USBs.Mouse;
 
 import javax.swing.*;
 import java.awt.*;
@@ -127,7 +127,7 @@ class ButtonFrame extends JFrame {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            try {//这tm啥玩意，我怎么一行都看不懂
+            try {
                 WindowTest.laptops.get(Integer.parseInt(numField.getText())).useUSB(new Mouse("mouse"));
             } catch (NumberFormatException e1) {
                 System.out.println("That Computer haven't been created");
@@ -151,7 +151,7 @@ class ButtonFrame extends JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
             USB usb;
-            if (usbTypeField.getText().equals("disk") || usbTypeField.getText().equals("Disk")) {
+            if ("disk".equals(usbTypeField.getText()) || "Disk".equals(usbTypeField.getText())) {
                 usb = new Disk();
                 try {
                     WindowTest.laptops.get(Integer.parseInt(computerNameField.getText()) - 1).addUSB(usb, Integer.parseInt(seeUSBField.getText()) - 1);

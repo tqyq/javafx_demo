@@ -1,7 +1,8 @@
-package com.szzrain.USBs;
+package com.szzrain.javaFX.USBs;
 
-import com.szzrain.USB;
+import com.szzrain.javaFX.USB;
 
+@IAmUSB(openMethod = "openDevices", useMethod = "useDevices", closeMethod = "closeDevices")
 public final class Disk implements USB {
     @Override
     public void openDevices() {

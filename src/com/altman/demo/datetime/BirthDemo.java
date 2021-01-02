@@ -7,12 +7,14 @@ import java.util.Random;
 
 public class BirthDemo {
 
+    private final static int DAYS = 365;
+
     public String getRandomBirth() {
         DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
         Calendar c = Calendar.getInstance();
         // only generate the ages between 14 and 40
-        int year = getRandomInt(14, 40);
-        c.add(Calendar.DATE, -year * 365);
+        int days = getRandomInt(14 * DAYS, 40 * DAYS);
+        c.add(Calendar.DATE, -days);
         return dateFormat.format(c.getTime());
     }
 
